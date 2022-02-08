@@ -15,7 +15,8 @@ class _AboutState extends State<About> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("ABOUT US!")),
+        title: Center(child: Text("ABOUT US!")),//title
+
         backgroundColor: Color.fromRGBO(115, 147, 179,1),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
