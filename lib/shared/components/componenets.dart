@@ -147,3 +147,49 @@ Widget about({ //about shape
     ),
   ),
 );
+
+
+// buttons for test
+
+Widget AnswerButton({
+  double width = double.infinity,
+  Color background =Colors.grey,
+  Function function,
+  String text ,
+})=> Container(
+  width: width,
+  child: MaterialButton(
+    onPressed: (){
+      function;
+
+    },
+    child: Text(
+      text,
+
+    ),
+  ),
+  decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(30.0,),
+    color:background ,
+  ),
+);
+
+Widget ShowResultButton({
+  Function function,
+})=>Container(
+  width: 150.0,
+  height:50.0,
+  child: MaterialButton(
+    onPressed: () {
+      function;
+    },
+    child: Text(
+      'Show Result',
+
+    ),
+  ),
+  decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(10.0,),
+    color: Colors.grey,
+  ),
+);
