@@ -328,8 +328,8 @@ class _ChatBotState extends State<ChatBot> {
               ), //Q2.1.2
               Visibility(
                 visible: v212A,
-                child: Text(
-                    'Protanomaly (aka red-weak) makes red look more green and less bright.'
+                child: Answer(
+                    message: 'Protanomaly (aka red-weak) makes red look more green and less bright.'
                 ),
 
 
@@ -595,10 +595,12 @@ class _ChatBotState extends State<ChatBot> {
 
               ), //q2.2.2
               Visibility(
-                visible: d222A,
+                visible: v212A,
                 child: Answer(
-                    message: 'Tritanopia makes you unable to tell the difference between blue and green, purple and red, and yellow and pink. It also makes colors look less bright.'
+                    message: 'Protanomaly (aka red-weak) makes red look more green and less bright.'
                 ),
+
+
 
               ),
 

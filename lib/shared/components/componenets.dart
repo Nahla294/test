@@ -22,11 +22,11 @@ Widget Answer({
           Padding(
             padding: EdgeInsets.all(10.0),
             child: Bubble(
-                radius: Radius.circular(20.0),
+                radius: Radius.circular(17.0),
                 color: Color.fromRGBO(115, 147, 179, 1.0),
                 elevation: 0.0,
                 child: Padding(
-                  padding: EdgeInsets.all(2.0),
+                  padding: EdgeInsets.all(5.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
@@ -38,7 +38,7 @@ Widget Answer({
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
-                              fontSize: 17),
+                              fontSize: 18),
                         ),
                       ))
                     ],
@@ -62,11 +62,11 @@ Widget send({
           Padding(
             padding: EdgeInsets.all(10.0),
             child: Bubble(
-                radius: Radius.circular(20.0),
+                radius: Radius.circular(17.0),
                 color: Color.fromRGBO(112, 128, 144, 1.0),
                 elevation: 0.0,
                 child: Padding(
-                  padding: EdgeInsets.all(0.0),
+                  padding: EdgeInsets.all(3.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
@@ -85,7 +85,7 @@ Widget send({
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 17),
+                                    fontSize: 18),
                               )),
                         ),
                       ))

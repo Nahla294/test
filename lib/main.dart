@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:graduation_project/modules/about_module/About.dart';
 import 'package:graduation_project/modules/chatbot_module/ChatBot.dart';
 
+import 'modules/test_module/test_screen.dart';
+
 void main() {
   runApp(MyApp());
 }
