@@ -1,6 +1,8 @@
 import 'package:bubble/bubble.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:graduation_project/modules/colorMatch_module/colorsCsvFile.dart';
+import 'package:graduation_project/modules/colorMatch_module/matched_colors.dart';
 
 Widget Answer({
   //chatbot answer shape
@@ -276,3 +278,82 @@ Widget DividerReport() => Padding(
         color: Colors.grey[300],
       ),
     );
+////////////////////////////////////////////////////////////////////////
+var colorName;
+bool visibleMatchedButton = true;
+Widget colorList(
+    List model,
+    context,
+    ) =>
+    Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          width:double.infinity,
+          decoration: BoxDecoration(
+
+              borderRadius: BorderRadius.circular(10.0),
+              color: Colors.grey[300]),
+          child: Row(
+            children: [
+              CircleAvatar(
+                backgroundColor: Color(model[2]),
+                radius: 40.0,
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Expanded(
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '${model[1]}',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16.0),
+                      ),
+                      Text(
+                        '${model[3]}',
+                       // maxLines: 2,
+                        //overflow: TextOverflow.ellipsis,
+                      ),
+                    ]),
+              ),
+
+
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0),
+                child: Visibility(
+                  visible: visibleMatchedButton,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left:20.0),
+                    child: CircleAvatar(
+                      child: IconButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder:(context)=> matched_colors(),
+                              ),
+                            );
+                            colorName = model[1];
+                            for (int i = 0; i < data.length; i++) {
+                              if (data[i][0] == colorName) {
+                                matched.insert(0, data[i]);
+                                visibleMatchedButton = false;
+                              }
+
+                            }
+                          },
+                          icon: Icon(Icons.arrow_right_alt)),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+
