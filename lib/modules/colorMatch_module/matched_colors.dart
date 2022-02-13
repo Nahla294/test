@@ -10,7 +10,7 @@ class matched_colors extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar:AppBar(
-            title: Text('Matched colors'),
+            title: Text('$colorName'),
             leading: Builder(
                 builder: (BuildContext context) {
                   return IconButton(
@@ -23,7 +23,7 @@ class matched_colors extends StatelessWidget {
                   );})),
 
         body:ListView.separated(
-            reverse: true,
+
 
             itemBuilder: (context, int index,) => colorList(matched[index],context),
             separatorBuilder: (context, index) => Padding(

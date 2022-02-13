@@ -10,7 +10,7 @@ class basic_colors extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return ListView.separated(
-      reverse: true,
+
         controller:controller,
         itemBuilder: (context, int index) => colorList(basic_data[index],context),
         separatorBuilder: (context, index) => Padding(

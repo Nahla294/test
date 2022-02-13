@@ -41,8 +41,9 @@ class _colorsCsvFileState extends State<colorsCsvFile> {
 
     data = CsvToListConverter(eol: "\n", fieldDelimiter: ",", shouldParseNumbers: true).convert(mydata).toList();
     for (int i = 0; i < data.length; i++) {
-      if (data[i][5] == 'basic') {
+      if (data[i][0] == 'basic') {
         basic_data.insert(0, data[i]);
+        print(basic_data.length);
 
 
 
