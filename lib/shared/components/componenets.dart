@@ -372,28 +372,3 @@ Widget colorList(
         ),
       ),
     );
-
-Widget CardMenu({
-  Color fontColor = Colors.black,
-  Color color ,
-  //Color color ,
-})=>Container(
-      padding: const EdgeInsets.symmetric(vertical: 30),
-      width: 160,
-      height: 150,
-      decoration: BoxDecoration(
-        color: color = Colors.grey[350].withOpacity(0.5),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.shade400,
-            spreadRadius: 2,
-            blurRadius: 2,
-            offset: Offset(4, 5),
-
-          ),
-        ],
-        borderRadius: BorderRadius.circular(40.0),
-
-      ),
-
-    );
